@@ -35,17 +35,17 @@ $ gpt "Your query here" --system "Your custom system message" --user "Your custo
 
 ```bash
 $ gpt "How do I check disk space?"
-'df -h'
+df -h
 
 ```
 
 ```bash
 $ gpt "How can I see all running processes?"
-'ps aux'
+ps aux
 ```
 ```bash
 $ gpt "How do I find my machine's IP address?"
-'ip addr show'
+ip addr show
 ```
 
 ## Configuration
