@@ -80,7 +80,7 @@ find /path/to/directory -name "*.txt" -exec cat {} + | wc -l
 ```
 At first glance, both might seem to do the job. However, upon closer inspection, the first command might return a count that's double the actual number of lines. Why? Because `wc -l` produces an output line for each file and a cumulative count when used with multiple files. The `awk` part then sums all these numbers, leading to an inflated total.
 
-The lesson here? Always review and understand the commands you get. Even if a command looks technically correct, it may not deliver the expected result in every context.
+The lesson here? **Always review and understand the commands you get**. Even if a command looks technically correct, it may not deliver the expected result in every context.
 
 CommandGPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user. So always verify its correctness for your specific use case.
 
