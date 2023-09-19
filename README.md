@@ -1,4 +1,4 @@
-# GPT Commander
+# Command GPT
 
 A simple command-line utility to interact with OpenAI's API and retrieve shell suggestions. By default, predefined system and user messages are used to facilitate the interaction. However, flags are available to allow customization of these messages per request.
 
@@ -50,15 +50,15 @@ $ gpt "How do I find my machine's IP address?"
 
 ## Configuration
 
-On the first run, gptcommander will create a configuration file named `.openai_config` in your home directory. This file will store the OpenAI API key and model to facilitate future interactions without the need to repeatedly input those details.
+On the first run, Command GPT will create a configuration file named `.openai_config` in your home directory. This file will store the OpenAI API key and model to facilitate future interactions without the need to repeatedly input those details.
 
 It's recommended to check the file's permissions and ensure it's protected, as it contains sensitive information. Always be careful about where and how you store your API keys.
 
 ## Output Safety
 
-To ensure that the output from gptcommander doesn't inadvertently get executed as part of a piped command or in any scripting environment, the returned shell command suggestions are quoted using the `shlex.quote`function. This guarantees that special characters in the output are safely escaped, making it suitable for direct use in a shell or scripting context without unintentional code execution.
+To ensure that the output from Command GPT doesn't inadvertently get executed as part of a piped command or in any scripting environment, the returned shell command suggestions are quoted using the `shlex.quote`function. This guarantees that special characters in the output are safely escaped, making it suitable for direct use in a shell or scripting context without unintentional code execution.
 
-If you like to live dangerously and you're chaining the output of gptcommander into another command or a script, make sure to appropriately parse or unquote the output based on your specific use case.
+If you like to live dangerously and you're chaining the output of Command GPT into another command or a script, make sure to appropriately parse or unquote the output based on your specific use case.
 
 ## License
 
