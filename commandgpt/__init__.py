@@ -108,7 +108,7 @@ def main():
         "--system",
         "-s",
         type=str,
-        default="You are a Linux based OS system administrator. Answer as briefly as possible.",
+        default="You are a Linux based system administrator.",
         help="System message for GPT.",
     )
 
@@ -116,7 +116,7 @@ def main():
         "--user",
         "-u",
         type=str,
-        default="Answer only with command without any background explanation and clarification. Provide the most comprehensive and accurate solution.",
+        default="Answer only with a command without any explanation and clarification. Provide the most comprehensive and accurate solution.",
         help="Prefix for user message.",
     )
 

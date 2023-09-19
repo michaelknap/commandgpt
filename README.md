@@ -5,7 +5,7 @@ A simple command-line utility to interact with OpenAI's API and retrieve shell s
 ## Prerequisites
 
 1. **Python 3**
-2. **An OpenAI API Key**
+2. **OpenAI API Key**
 
 ## Install
 
@@ -16,8 +16,8 @@ pip install commandgpt
 ## Usage
 
 By default, the system and user messages are set as:
-- System: "You are a Linux based OS system administrator. Answer as briefly as possible."
-- User: "Answer only with command without any background explanation and clarification. Provide the most comprehensive and accurate solution."
+- System: "You are a Linux based system administrator."
+- User: "Answer only with a command without any explanation and clarification. Provide the most comprehensive and accurate solution."
 
 You can use the utility without specifying these defaults:
 
@@ -64,7 +64,7 @@ Before utilizing any output, please ensure you're fully aware of its content and
 
 ## A Word of Caution!
 
-While GPT aims to provide accurate and efficient command suggestions, it's essential to understand the commands and not take them at face value. As with any AI system, the commands it produces may not always reflect the most accurate or optimal solution for a given task.
+While GPT aims to provide accurate and efficient command suggestions, it's essential to understand the commands and not take them at face value. As with any AI system, the output it produces may not always reflect the most accurate or optimal solution for a given task.
 
 ### Illustrative Example: Counting Lines in Text Files
 
@@ -82,7 +82,7 @@ At first glance, both might seem to do the job. However, upon closer inspection,
 
 The lesson here? **Always review and understand the commands you get**. Even if a command looks technically correct, it may not deliver the expected result in every context.
 
-CommandGPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user.
+Command GPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user.
 
 ## License
 
