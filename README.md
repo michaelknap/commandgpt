@@ -62,6 +62,28 @@ Using the raw output in scripts or as part of piped commands can be hazardous. I
 
 Before utilizing any output, please ensure you're fully aware of its content and potential side effects. 
 
+## A Word of Caution!
+
+While GPT aims to provide accurate and efficient command suggestions, it's essential to understand the commands and not take them at face value. As with any AI system, the commands it produces may not always reflect the most accurate or optimal solution for a given task.
+
+### Illustrative Example: Counting Lines in Text Files
+
+Imagine you want to count all the lines in .txt files within a directory. You might get two suggestions:
+
+1. 
+```
+find /path/to/directory -type f -name "*.txt" -exec wc -l {} + | awk '{sum += $1} END {print sum}'
+```
+2.
+```
+find /path/to/directory -name "*.txt" -exec cat {} + | wc -l
+```
+At first glance, both might seem to do the job. However, upon closer inspection, the first command might return a count that's double the actual number of lines. Why? Because `wc -l` produces an output line for each file and a cumulative count when used with multiple files. The `awk` part then sums all these numbers, leading to an inflated total.
+
+The lesson here? Always review and understand the commands you get. Even if a command looks technically correct, it may not deliver the expected result in every context.
+
+CommandGPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user. So, trust the output, but always verify its correctness for your specific use case.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
