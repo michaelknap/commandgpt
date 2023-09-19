@@ -70,12 +70,9 @@ While GPT aims to provide accurate and efficient command suggestions, it's essen
 
 Imagine you want to count all the lines in .txt files within a directory. You might get two suggestions:
 
-1. ```bash
-find /path/to/directory -type f -name "*.txt" -exec wc -l {} + | awk '{sum += $1} END {print sum}'
-```
-2. ```bash
-find /path/to/directory -name "*.txt" -exec cat {} + | wc -l
-```
+1. ```bash find /path/to/directory -type f -name "*.txt" -exec wc -l {} + | awk '{sum += $1} END {print sum}'```
+2. ```bash find /path/to/directory -name "*.txt" -exec cat {} + | wc -l ```
+
 At first glance, both might seem to do the job. However, upon closer inspection, the first command might return a count that's double the actual number of lines. Why? Because `wc -l` produces an output line for each file and a cumulative count when used with multiple files. The `awk` part then sums all these numbers, leading to an inflated total.
 
 The lesson here? **Always review and understand the commands you get**. Even if a command looks technically correct, it may not deliver the expected result in every context.
