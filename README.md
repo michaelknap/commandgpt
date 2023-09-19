@@ -82,7 +82,7 @@ At first glance, both might seem to do the job. However, upon closer inspection,
 
 The lesson here? **Always review and understand the commands you get**. Even if a command looks technically correct, it may not deliver the expected result in every context.
 
-CommandGPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user. So always verify its correctness for your specific use case.
+CommandGPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user.
 
 ## License
 
