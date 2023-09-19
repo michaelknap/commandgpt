@@ -37,7 +37,7 @@ class OpenAIChat:
             query (str): The user's query.
 
         Returns:
-            str: The response from the OpenAI API, quoted for shell safety.
+            str: The response from the OpenAI API.
         """
         user_msg = f"{user_prefix} {query}"
         try:
