@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import shlex
 import openai
 import argparse
 import configparser
@@ -49,8 +48,7 @@ class OpenAIChat:
                     {"role": "user", "content": user_msg},
                 ],
             )
-            text = response["choices"][0]["message"]["content"]
-            return shlex.quote(text)
+            return response["choices"][0]["message"]["content"]
 
         except openai.error.RateLimitError:
             return "You exceeded your current quota. Please check your plan and billing details."

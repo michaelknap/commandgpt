@@ -54,11 +54,13 @@ On the first run, Command GPT will create a configuration file named `.openai_co
 
 It's recommended to check the file's permissions and ensure it's protected, as it contains sensitive information. Always be careful about where and how you store your API keys.
 
-## Output Safety
+## Output Safety Warning
 
-To ensure that the output from Command GPT doesn't inadvertently get executed as part of a piped command or in any scripting environment, the returned shell command suggestions are quoted using the `shlex.quote`function. This guarantees that special characters in the output are safely escaped, making it suitable for direct use in a shell or scripting context without unintentional code execution.
+The output from Command GPT is not escaped or quoted by default. This means that special characters or command structures in the output can have direct consequences if executed in a shell or scripting environment.
 
-If you like to live dangerously and you're chaining the output of Command GPT into another command or a script, make sure to appropriately parse or unquote the output based on your specific use case.
+Using the raw output in scripts or as part of piped commands can be hazardous. I strongly advise against directly integrating the output of Command GPT into another command, script, or pipeline without meticulously reviewing and understanding its implications.
+
+Before utilizing any output, please ensure you're fully aware of its content and potential side effects. 
 
 ## License
 
