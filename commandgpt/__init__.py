@@ -5,7 +5,7 @@ import argparse
 import configparser
 from pathlib import Path
 
-__VERSION__ = "0.0.4"
+__version__ = "0.0.4"
 
 # Constants
 DEFAULT_MODEL = "gpt-3.5-turbo"
@@ -126,7 +126,7 @@ def main():
         "-v",
         "--version",
         action="version",
-        version=f"%(prog)s {__VERSION__}",
+        version=f"%(prog)s {__version__}",
         help="Show the version number and exit.",
     )
     args = parser.parse_args()
