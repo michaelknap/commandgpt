@@ -5,7 +5,7 @@ import argparse
 import configparser
 from pathlib import Path
 
-__version__ = "0.0.7"
+__version__ = "0.0.9"
 
 # Constants
 DEFAULT_MODEL = "gpt-3.5-turbo"
