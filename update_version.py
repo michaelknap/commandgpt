@@ -6,7 +6,12 @@ def extract_current_version(filename):
     with open(filename, "r") as file:
         content = file.read()
 
-    match = re.search(r'__version__\s*=\s*["\'](.*?)["\']', content)
+    if filename == "commandgpt/__init__.py":
+        pattern = r'__version__\s*=\s*["\'](.*?)["\']'
+    else:
+        pattern = r'(\s*version\s*=\s*)["\'](.*?)["\']'
+
+    match = re.search(pattern, content)
     if match:
         return match.group(1)
     raise ValueError(f"Version not found in {filename}")
@@ -28,7 +33,11 @@ def increment_version(version, release_type):
 
 
 def update_file_version(filename, new_version):
-    pattern = r'(\s*version\s*=\s*)["\'](.*?)["\']'
+    if filename == "commandgpt/__init__.py":
+        pattern = r'(__version__\s*=\s*)["\'](.*?)["\']'
+    else:
+        pattern = r'(\s*version\s*=\s*)["\'](.*?)["\']'
+
     replacement = f'\\1"{new_version}"'
 
     with open(filename, "r") as file:
