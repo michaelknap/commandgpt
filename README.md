@@ -52,8 +52,6 @@ ip addr show
 
 On the first run, Command GPT will create a configuration file named `.openai_config` in your home directory. This file will store the OpenAI API key and model to facilitate future interactions without the need to repeatedly input those details.
 
-It's recommended to check the file's permissions and ensure it's protected, as it contains sensitive information. Always be careful about where and how you store your API keys.
-
 ## Output Safety Warning
 
 The output from Command GPT is not escaped or quoted by default. This means that special characters or command structures in the output can have direct consequences if executed in a shell or scripting environment.
@@ -68,7 +66,7 @@ While GPT aims to provide accurate and efficient command suggestions, it's essen
 
 ### Illustrative Example: Counting Lines in Text Files
 
-Imagine you want to count all the lines in .txt files within a directory. You might get two suggestions:
+Imagine you want to count all the lines in .txt files within a directory, recursively. You might get two suggestions:
 
 1. `find /path/to/directory -type f -name "*.txt" -exec wc -l {} + | awk '{sum += $1} END {print sum}'`
 2. `find /path/to/directory -name "*.txt" -exec cat {} + | wc -l `
@@ -78,6 +76,13 @@ At first glance, both might seem to do the job. However, upon closer inspection,
 The lesson here? **Always review and understand the commands you get**. Even if a command looks technically correct, it may not deliver the expected result in every context.
 
 Command GPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user.
+
+## TODO
+
+ - Move system and user messages to config file and set them during first run.
+ - Think of a better way to store API key (keyring module?).
+ - Add --config flag to reconfigure settings.
+ - Add more openai models including images.
 
 ## License
 

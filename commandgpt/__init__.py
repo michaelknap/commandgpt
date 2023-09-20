@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import openai
 import argparse
 import configparser
@@ -93,6 +94,7 @@ class OpenAIChat:
             }
             with CONFIG_PATH.open("w") as config_file:
                 config.write(config_file)
+            os.chmod(CONFIG_PATH, 0o600)
 
 
 def main():
@@ -105,16 +107,16 @@ def main():
     parser.add_argument("query", type=str, help="Your question or query.")
 
     parser.add_argument(
-        "--system",
         "-s",
+        "--system",
         type=str,
         default="You are a Linux based system administrator.",
         help="System message for GPT.",
     )
 
     parser.add_argument(
-        "--user",
         "-u",
+        "--user",
         type=str,
         default="Answer only with a command without any explanation and clarification. Provide the most comprehensive and accurate solution.",
         help="Prefix for user message.",
