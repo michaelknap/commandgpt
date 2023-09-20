@@ -78,6 +78,7 @@ The lesson here? **Always review and understand the commands you get**. Even if 
 Command GPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user.
 
 ## TODO
+
  - Move system and user messages to config file and set them during first run.
  - Think of a better way to store API key (keyring module?).
  - Add --config flag to reconfigure settings.
