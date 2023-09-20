@@ -1,4 +1,5 @@
 import re
+import sys
 
 
 def extract_current_version(filename):
