@@ -5,6 +5,7 @@ import argparse
 import configparser
 from pathlib import Path
 
+__VERSION__ = "0.0.4"
 
 # Constants
 DEFAULT_MODEL = "gpt-3.5-turbo"
@@ -121,7 +122,13 @@ def main():
         default="Answer only with a command without any explanation and clarification. Provide the most comprehensive and accurate solution.",
         help="Prefix for user message.",
     )
-
+    parser.add_argument(
+        "-v",
+        "--version",
+        action="version",
+        version=f"%(prog)s {__VERSION__}",
+        help="Show the version number and exit.",
+    )
     args = parser.parse_args()
 
     try:
