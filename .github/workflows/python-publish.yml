@@ -6,12 +6,6 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-              
-
-- name: Automatic Versioning
-  uses: nicupavel/action-files-version-increment@v3
-          
-
 name: Upload Python Package
 
 on:
