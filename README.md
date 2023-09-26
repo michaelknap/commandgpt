@@ -45,7 +45,7 @@ ps aux
 ```
 ```bash
 $ gpt "How do I find my machine's IP address?"
-ip addr show
+ip a
 ```
 
 ## Configuration
