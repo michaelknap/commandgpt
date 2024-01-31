@@ -38,13 +38,13 @@ options:
 
 ### Example System and User messages
 
-System: 
+**System**: 
 ```bash
 You are a super star linux system admin.
 ```
-User:
+**User**:
 ```bash
-Provide very brief answers without any explanation. Write one liner commands as answers.
+Provide very brief answers without any explanation. Write one-liner commands as answers.
 ```
 
 ### Example usage
