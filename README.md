@@ -14,12 +14,40 @@ pip install commandgpt
 ```
 
 ## Usage
+On the **first run**, Command GPT will create a configuration file named `.openai_config` in your home directory and **prompt you for details**. This file will store the OpenAI API key, model version, user and system messages to facilitate future interactions without the need to repeatedly input those details.
 
-By default, the system and user messages are set as:
-- System: "You are a Linux based system administrator."
-- User: "Answer only with a command without any explanation and clarification. Provide the most comprehensive and accurate solution."
+```bash 
+└─$ gpt -h                                                        
+usage: gpt [-h] [-s SYSTEM] [-u USER] [-d] [-c] [-v] [query]
 
-You can use the utility without specifying these defaults:
+Interact with OpenAI ChatGPT.
+
+positional arguments:
+  query                 your question or query
+
+options:
+  -h, --help            show this help message and exit
+  -s SYSTEM, --system SYSTEM
+                        system message for AI
+  -u USER, --user USER  prefix for user message
+  -d, --debug           enable debug mode
+  -c, --config          reconfigure settings
+  -v, --version         show the version number and exit
+```
+
+
+### Example System and User messages
+
+System: 
+```bash
+You are a super star linux system admin.
+```
+User:
+```bash
+Provide very brief answers without any explanation. Write one liner commands as answers.
+```
+
+### Example usage
 
 ```bash
 $ gpt "Your query here"
@@ -30,8 +58,6 @@ However, if you wish to customize the system or user messages:
 ```bash
 $ gpt "Your query here" --system "Your custom system message" --user "Your custom user prefix"
 ```
-
-**Example**:
 
 ```bash
 $ gpt "How do I check disk space?"
@@ -47,10 +73,6 @@ ps aux
 $ gpt "How do I find my machine's IP address?"
 ip a
 ```
-
-## Configuration
-
-On the first run, Command GPT will create a configuration file named `.openai_config` in your home directory. This file will store the OpenAI API key and model to facilitate future interactions without the need to repeatedly input those details.
 
 ## Output Safety Warning
 
@@ -78,10 +100,7 @@ The lesson here? **Always review and understand the commands you get**. Even if 
 Command GPT is a tool, and like any tool, its effectiveness depends on the skill and awareness of the user.
 
 ## TODO
-
- - Move system and user messages to config file and set them during first run.
  - Think of a better way to store API key (keyring module?).
- - Add --config flag to reconfigure settings.
  - Add more openai models including images.
 
 ## License
