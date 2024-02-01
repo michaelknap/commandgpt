@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "commandgpt"
-version = "0.1.0"
+version = "0.1.1"
 description = "A CLI utility for interacting with OpenAI GPT."
 authors = ["Michael Knap"]
 readme = "README.md"

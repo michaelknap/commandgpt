@@ -6,7 +6,7 @@ import configparser
 from pathlib import Path
 from openai import OpenAI
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 # Constants
 DEFAULT_MODEL = "gpt-3.5-turbo"
