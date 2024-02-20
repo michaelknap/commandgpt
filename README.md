@@ -16,7 +16,7 @@ pip install commandgpt
 ## Usage
 On the **first run**, Command GPT will create a configuration file named `.openai_config` in your home directory and **prompt you for details**. This file will store the OpenAI API key, model version, user and system messages to facilitate future interactions without the need to repeatedly input those details.
 
-```bash 
+```
 └─$ gpt -h                                                        
 usage: gpt [-h] [-s SYSTEM] [-u USER] [-d] [-c] [-v] [query]
 
